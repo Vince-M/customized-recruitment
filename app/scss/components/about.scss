@@ -1,0 +1,118 @@
+@use '../util' as *;
+
+.about {
+
+  &__intro {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: rem(20);
+    margin-bottom: rem(80);
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+    }
+
+    &--img,
+    &--text {
+      flex: 1 0 45%;
+    }
+
+    &--img {
+      padding-right: rem(10);
+    }
+
+    &--bold {
+      font-size: rem(20);
+      line-height: 1.4;
+      color: var(--darkGrey);
+    }
+
+    &--text {
+      padding-left: rem(10);
+      padding-right: rem(10);
+    }
+
+  }
+
+  &__bio {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: rem(20);
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+      margin-bottom: rem(60);
+    }
+
+    &--images,
+    &--text {
+      flex: 1 0 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: rem(20);
+
+      @include breakpoint-down(small) {
+        padding: 0;
+      }
+    }
+
+    &--images {
+
+      @include breakpoint-down(small) {
+        order: 2;
+      }
+    }
+
+    &--text {
+
+
+      h2,
+      h3 {
+        font-family: var(--font-heading);
+        color: var(--corpRed);
+      }
+
+      h2 {
+        font-size: rem(32);
+        font-weight: 700;
+      }
+
+      h3 {
+        font-size: rem(30);
+        font-weight: 500;
+        margin-bottom: rem(25);
+      }
+    }
+  }
+}
+
+.bioImage {
+  margin-bottom: rem(20);
+  width: 100%;
+  overflow: hidden;
+}
+
+.bio__clientImages {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  gap: rem(10);
+
+  @include breakpoint-down(small) {
+    width: 100%;
+    gap: rem(10);
+  }
+}
+
+.clientImage {
+  overflow: hidden;
+}

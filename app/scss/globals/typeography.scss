@@ -1,0 +1,40 @@
+@use '../util' as *;
+
+h1, 
+h2, 
+h3,
+h4 {
+  margin-top: 0;
+  font-family: var(--font-heading);
+  line-height: 1.1;
+}
+
+p {
+  font-family: var(--font-text);
+  color: var(--textGrey);
+  font-size: rem(17);
+  line-height: 1.5;
+  padding-right: rem(20);
+  margin-bottom: rem(20);
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+a {
+  color: var(--link);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--linkHover);
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+  }
+}
+
+.hightlight-text {
+  color: var(--corpRed);
+}

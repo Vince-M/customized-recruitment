@@ -1,0 +1,95 @@
+@use '../util' as *;
+
+/* Footer
+/* -------------------------------------*/
+.footer {
+  height: auto;
+  background-color: var(--lightGrey);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: rem(30) 0;
+
+  &__identity,
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(30);
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+    }
+
+    &--item {
+      margin: 0 0 0 rem(24);
+
+      a {
+        font-family: var(--font-heading);
+        font-size: rem(16);
+        font-weight: 700;
+        letter-spacing: rem(1);
+        color: var(--link);
+        cursor: pointer;
+
+        &:hover {
+          color: var(--linkHover);
+        }
+      }
+
+      @include breakpoint-down(small) {
+        margin: 0 0 rem(20) 0;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+    }
+
+    &--privacy {
+      font-size: rem(14);
+      margin-right: rem(20);
+
+      // a {
+      //   color: var(--link);
+      //   cursor: pointer;
+
+      //   @:hover {
+      //     color: var(--linkHover);
+      //     text-decoration: underline;
+      //   }
+      // }
+    }
+
+    &--copyright {
+      font-size: rem(14);
+      margin-left: rem(20);
+    }
+
+    &--privacy,
+    &--social,
+    &--copyright {
+
+      @include breakpoint-down(small) {
+        margin: 0 0 rem(20) 0;
+      }
+    }
+  }
+}

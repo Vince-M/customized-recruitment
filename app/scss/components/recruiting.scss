@@ -1,0 +1,60 @@
+@use '../util' as *;
+
+.recruiting {
+
+  &__intro {
+    margin-bottom: rem(80);
+  
+    &--bold p {
+      font-size: rem(20);
+      line-height: 1.4;
+      color: var(--darkGrey);
+    }
+  }
+
+  &__image {
+    margin-bottom: rem(60);
+    max-height: rem(275);
+    vertical-align: top;
+    overflow: hidden;
+
+    @include breakpoint-down(small) {
+      margin-bottom: rem(30);
+    }
+  }
+
+}
+
+.hiringProcess {
+  margin-bottom: rem(60);
+
+  h2 {
+    font-size: rem(40);
+    color: var(--darkGrey);
+    margin-bottom: rem(8);
+  }
+
+  &__intro {
+
+  }
+
+  &__list {
+    margin-left: rem(40);
+
+    ol {
+      list-style: decimal;
+      line-height: 1.5;
+      margin-bottom: rem(40);
+    }
+
+    ol li {
+      margin-bottom: rem(15);
+      padding-left: rem(10);
+    }
+
+    &--strong {
+      font-weight: 700;
+      color: var(--darkGrey);
+    }
+  }
+}

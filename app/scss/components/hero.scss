@@ -1,0 +1,203 @@
+@use '../util' as *;
+
+.frontPage {
+
+  &__hero {
+    background-image: url(../img/index-handsIn_1920x1080.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    left: 49%;
+    transform: translateX(-49%);
+    position: relative;
+    margin: 0 0 rem(80) 0;
+    height: 100vh;
+    overflow: hidden;
+    clear: both;
+
+    @include breakpoint-down(medium) {
+      background-position: 75% top;
+      background-color: black;
+    }
+
+    &--headline {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      position: absolute;
+      top: 25%;
+      left: 20%;
+      z-index: 900;
+      width: 100%;
+
+      @include breakpoint-down(medium) {
+        left: 10%;
+        right: 5%;
+        width: 80%;
+        align-items: flex-start;
+      }
+
+      @include breakpoint-down(small) {
+        align-items: center;
+        top: 25%;
+        text-align: center;
+        left: 5%;
+        width: 90%;
+      }
+
+      h1,
+      h2 {
+        font-weight: 700;
+        color: var(--white);
+        text-shadow: 0 0 rem(7) var(--black);
+      }
+      
+
+      h1 {
+        font-size: rem(40);
+        margin-bottom: rem(30);
+        width: 40%;
+
+        @include breakpoint-down(medium) {
+          width: 100%;
+        }
+
+        @include breakpoint-down(medium) {
+          font-size: rem(32);
+        }
+
+      }
+
+      h2 {
+        font-size: rem(28);
+        line-height: 1.3;
+        margin-bottom: rem(25);
+        width: 30%;
+
+        @include breakpoint-down(medium) {
+          width: 80%;
+        }
+
+        @include breakpoint-down(small) {
+          font-size: rem(24);
+          line-height: 1.3;
+          width: 100%;
+        }
+
+      }
+    }
+  }
+}
+
+
+.pageBanner {
+  
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  left: 49%;
+  transform: translateX(-49%);
+  position: relative;
+  margin: 0 0 rem(80) 0;
+  height: rem(300);
+  overflow: hidden;
+  clear: both;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  &--about {
+    background-image: url(../img/hero_about_1920x500.jpg);
+  }
+
+  &--testimonial {
+    background-image: url(../img/hero_testimonial_1920x500.jpg);
+  }
+
+  &--recruiting {
+    background-image: url(../img/hero_recruiting_1920x500.jpg);
+  }
+
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: rem(52);
+    font-weight: 900;
+    color: var(--white);
+    text-shadow: 0 0 rem(5) var(--black);
+    padding-left: rem(20);
+    margin-bottom: rem(10);
+    text-transform: uppercase;
+
+    @include breakpoint-down(small) {
+      font-size: rem(44);
+    }
+  }
+}
+
+.header {
+
+  &__hero {
+    max-height: rem(400);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: rem(60);
+
+    @include breakpoint-down(small) {
+      margin-bottom: rem(40);
+    }
+
+    &--image {
+
+      @include breakpoint-down(medium) {
+        margin-top: rem(90);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+      }
+
+    }
+
+    &--content {
+      position: absolute;
+      bottom: rem(20);
+      left: rem(100);
+
+      @include breakpoint-down(medium) {
+        bottom: rem(10);
+        left: rem(30);
+      }
+
+      @include breakpoint-down(small) {
+        left: rem(20);
+      }
+
+      h1 {
+        color: var(--white);
+        font-family: var(--font-heading);
+        font-size: rem(52);
+        font-weight: 900;
+        line-height: 1.2;
+        padding-left: rem(20);
+        text-shadow: 0 0 .3125rem var(--black);
+        text-transform: uppercase;
+        border-left: rem(10) solid var(--corpRed);
+
+        @include breakpoint-down(medium) {
+          font-size: rem(42);
+          border-left: rem(5) solid var(--corpRed);
+          padding-left: rem(10);
+        }
+
+        @include breakpoint-down(small) {
+          font-size: rem(28);
+          border-left: rem(3) solid var(--corpRed);
+        }
+      }
+    }
+  }
+}
+

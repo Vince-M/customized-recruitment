@@ -1,0 +1,117 @@
+@use '../util' as *;
+
+// BUTTONS
+.button {
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn {
+  font-family: var(--font-heading);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: rem(1);
+  // padding: rem(8) rem(16);
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+
+  &--lc {
+    text-transform: lowercase;
+    font-weight: 300;
+  }
+
+  a {
+    text-transform: uppercase;
+    padding: rem(8) rem(20);
+    border-radius: 0;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+      transition: color 200ms ease-in-out;
+    }
+  }
+
+  &__navContact {
+    margin-left: rem(35);
+
+    @include breakpoint-down(medium) {
+      margin-left: 0;
+    }
+  }
+
+  &__hero {
+    margin-top: rem(32);
+  }
+
+  &__headerNav {
+    color: var(--darkGrey);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: rem(17);
+    font-weight: 500;
+    letter-spacing: rem(1);
+  }
+
+  &__contact a,
+  &__navContact a {
+    background-color: var(--white);
+    border: rem(1) solid var(--darkGrey);
+    color: var(--darkGrey);
+
+
+    @include breakpoint-down(medium) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      background-color: var(--corpRed);
+      border: rem(1) solid var(--darkGrey);
+      color: var(--white);
+      text-decoration: none;
+      transition: color 350ms ease-in-out;
+    }
+  }
+
+  &__recruiting a {
+    background-color: var(--corpRed);
+    border: rem(1) solid var(--white);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--white);
+      border: rem(1) solid var(--darkGrey);
+      color: var(--corpRed);
+    }
+  }
+
+  &__about a {
+    background-color: var(--white);
+    border: rem(1) solid var(--darkGrey);
+    color: var(--darkGrey);
+
+    &:hover {
+      background-color: var(--darkGrey);
+      border: rem(1) solid var(--darkGrey);
+      color: var(--white);
+      text-decoration: none;
+      transition: color 350ms ease-in-out;
+    }
+  }
+
+  &__testimonial a {
+    background-color: var(--white);
+    border: rem(1) solid var(--darkGrey);
+    color: var(--corpRed);
+    padding: rem(10) rem(20);
+
+    &:hover {
+      background-color: var(--corpRed);
+      color: var(--white);
+      transition: color 200ms ease-in-out;
+    }
+  }
+}
