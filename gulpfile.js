@@ -27,7 +27,7 @@ function jsTask() {
 // Browsersync
 function browserSyncServe(cb) {
   browsersync.init({
-    browser: 'firefox developer edition',
+    browser: 'firefox',
     proxy: "http://customized-recruitment.local/",
     notify: {
       styles: {
