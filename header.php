@@ -1,19 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Customized Recruitment</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"> 
-
-    <link rel="stylesheet" href="./dist/style.css">
-    <script defer src="./dist/script.js"></script>
 
     <?php wp_head(); ?>
 </head>
@@ -26,8 +16,8 @@
       <div class="overlay has-fade"></div>
 
       <nav class="container-lg nav">
-        <a href="index.html">
-          <img class="header__logo" src="img/Customized_Recruitment_logo.svg" width="215" height="62" alt="Customized Recruitment logo">
+        <a href="<?php echo site_url(); ?>">
+          <img class="header__logo" src="<?php echo get_theme_file_uri() ?>/img/Customized_Recruitment_logo.svg" width="215" height="62" alt="Customized Recruitment logo">
         </a>
 
         <div id="btnHamburger" class="nav__toggle header__menu hide-for-desktop">
@@ -49,4 +39,4 @@
 
   <!-- MAIN
   =================================================== -->
-    <main class="main">
+  <main class="main">
