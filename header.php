@@ -27,11 +27,14 @@
         </div> <!-- nav__toggle header__menu hide-for-desktop -->
 
         <ul class="nav__list header__links hide-for-mobile mobileMenu">
-          <li class="nav__item first-item"><a href="index.html">Home</a></li>
-          <li class="nav__item"><a href="recruiting.html">Recruiting Services</a></li>
-          <li class="nav__item"><a href="testimonials.html">Testimonials</a></li>
-          <li class="nav__item"><a href="about.html">About</a></li>
-          <li class="btn nav__item--btn btn__navContact"><a href="contact.html" class="button btn btn__headerNav">Contact</a></li>
+          <?php
+            wp_nav_menu( array(
+              'theme_location'  =>  'header-menu',
+              'depth'           =>  3,
+              'container'       =>  false,
+               'menu_class'     =>  'menu nav__list'
+            ))
+          ?>
         </ul>
       </nav> <!-- container-lg nav -->
     </header>

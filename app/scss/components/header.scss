@@ -106,8 +106,9 @@
     transition: right .4s cubic-beizer(0,.5,0,1), border-color .4s ease-out;
   }
 
-  &__item a:hover {
-    color: var(--midGrey);
+  &__item a:hover,
+  &__item a:active {
+    color: var(--corpRed);
     text-decoration: none;
   }
 
@@ -131,6 +132,11 @@
       }
     }
   }
+}
+
+.current_page_item a {
+  color: var(--corpRed);
+  text-decoration: none;
 }
 
 .first-item a {

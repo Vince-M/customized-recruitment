@@ -21,3 +21,18 @@ function add_comment_to_body_open() {
 printf( "<!-- THIS SHOULD RENDER AFTER THE BODY TAG OPENS --" );
 }
 add_action( 'wp_body_open', 'add_comment_to_body_open' );
+
+function recruitment_features() {
+  add_theme_support( 'title-tag' );
+}
+
+add_action( 'after_setup_theme', 'recruitment_features');
+
+function recruitment_theme_menus() {
+  register_nav_menus(
+    array(
+      'header-menu'  =>  'Header Menu'
+    )
+    );
+}
+add_action( 'init', 'recruitment_theme_menus');
