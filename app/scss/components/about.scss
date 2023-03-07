@@ -23,10 +23,11 @@
       padding-right: rem(10);
     }
 
-    &--bold {
+    &--bold p {
       font-size: rem(20);
       line-height: 1.4;
       color: var(--darkGrey);
+      margin-bottom: 0;
     }
 
     &--text {
