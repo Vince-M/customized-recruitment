@@ -1,0 +1,7 @@
+@use '../util' as *;
+
+.wp-block-image img {
+  height: auto;
+  width: 100%;
+  vertical-align: bottom;
+}
