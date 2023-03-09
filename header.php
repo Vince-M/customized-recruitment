@@ -20,22 +20,28 @@
           <img class="header__logo" src="<?php echo get_theme_file_uri() ?>/img/Customized_Recruitment_logo.svg" width="215" height="62" alt="Customized Recruitment logo">
         </a>
 
-        <div id="btnHamburger" class="nav__toggle header__menu hide-for-desktop">
+        <a id="btnHamburger" href="#" class="nav__toggle header__menu hide-for-desktop">
           <span></span>
           <span></span>
           <span></span>
-        </div> <!-- nav__toggle header__menu hide-for-desktop -->
+        </a>
 
-        <ul class="nav__list header__links hide-for-mobile mobileMenu">
+
           <?php
             wp_nav_menu( array(
-              'theme_location'  =>  'header-menu',
-              'depth'           =>  3,
-              'container'       =>  false,
-               'menu_class'     =>  'menu nav__list'
+              'theme_location'        =>  'header-menu',
+              'container_aria_label'  =>  '',
+              'container'             =>  false,
+               'menu_class'           =>  'menu nav__list header__links hide-for-mobile mobileMenu',
+               'menu_id'              =>  'menu',
+               'echo'                 =>  true,
+               'fallback_cb'          =>  'wp_page_menu',
+               'before'               =>  '',
+               'after'                =>  '',
+               'depth'                =>  0,
             ))
           ?>
-        </ul>
+
       </nav> <!-- container-lg nav -->
     </header>
   <!-- ============================================== -->

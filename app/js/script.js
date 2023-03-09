@@ -6,7 +6,7 @@ const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');
 const mobileMenu = document.querySelector('.mobileMenu');
 const nav__list = document.querySelector('.nav__list');
-const nav__item = document.querySelector('.nav__item');
+// const nav__item = document.querySelector('.nav__item');
 
 const faders = document.querySelectorAll('.fadeIn');
 
@@ -21,7 +21,7 @@ btnHamburger.addEventListener('click', function() {
     nav__list.classList.remove('fade-in');
     mobileMenu.classList.remove('nav-open');
     mobileMenu.classList.add('hide-for-mobile');
-    nav__item.classList.remove('nav__item--open');
+    // nav__item.classList.remove('nav__item--open');
   } else { // Open hamburger Menu
     console.log('else menu');
 
@@ -32,7 +32,7 @@ btnHamburger.addEventListener('click', function() {
     nav__list.classList.add('fade-in');
     mobileMenu.classList.add('nav-open');
     mobileMenu.classList.remove('hide-for-mobile');
-    nav__item.classList.add('nav__item--open');
+    // nav__item.classList.add('nav__item--open');
   }
 });
 

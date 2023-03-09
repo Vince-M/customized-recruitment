@@ -69,25 +69,20 @@
       }
     }
 
-    &--text {
-
-
-      h2,
-      h3 {
+    &--h2 {
         font-family: var(--font-heading);
         color: var(--corpRed);
-      }
-
-      h2 {
         font-size: rem(32);
         font-weight: 700;
-      }
 
-      h3 {
-        font-size: rem(30);
-        font-weight: 500;
-        margin-bottom: rem(25);
-      }
+    }
+
+    &--h3 {
+      font-family: var(--font-heading);
+      color: var(--corpRed);
+      font-size: rem(30);
+      font-weight: 500;
+      margin-bottom: rem(25);
     }
   }
 }

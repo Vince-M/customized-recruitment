@@ -36,13 +36,28 @@
           <a href="index.html"><img src="img/Customized_Recruitment_logo.svg" height="50" alt="Customized Recruitment logo"></a>
         </div>
         <div class="footer__menu">
-          <ul class="footer__nav">
+          <!-- <ul class="footer__nav">
             <li class="footer__nav--item"><a href="index.html">Home</a></li>
             <li class="footer__nav--item"><a href="#">Recruiting Services</a></li>
             <li class="footer__nav--item"><a href="#">Testimonials</a></li>
             <li class="footer__nav--item"><a href="about.html">About</a></li>
             <li class="footer__nav--item"><a href="#">Contact</a></li>
-          </ul> <!-- footer__nav -->
+          </ul> footer__nav -->
+
+          <?php
+            wp_nav_menu( array(
+              'theme_location'        =>  'footer-menu',
+              'container_aria_label'  =>  '',
+              'container'             =>  false,
+              'menu_class'            =>  'footer__nav',
+              'menu_id'               =>  'footer-menu',
+              'echo'                  =>  true,
+              'fallback_cb'           =>  'wp_page_menu',
+              'before'                =>  '',
+              'after'                 =>  '',
+              'depth'                 =>  0
+            ))
+          ?>
         </div> <!-- footer__menu -->
         <div class="footer__info">
           <p class="footer__info--privacy"><a href="#">Privacy Policy</a></p>
