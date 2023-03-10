@@ -43,6 +43,10 @@ body {
   width: 80%;
   max-width: rem(768);
   margin:0 auto;
+
+  @include breakpoint-down(small) {
+    width: 90%;
+  }
 }
 
 

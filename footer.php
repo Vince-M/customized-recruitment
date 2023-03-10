@@ -10,16 +10,15 @@
       <section class="container contact__section">
         <div class="contact__section--content">
           <div class="contact__section--img">
-            <img src="img/contact_us-section300x300.jpg" alt="contact-us" width="280" width="280" class="contact__us--img">
+            <img src="<?php echo get_theme_file_uri(); ?>/img/contact_us-section300x300.jpg" alt="contact-us" width="280" width="280" class="contact__us--img">
           </div>
           <div class="contact__section--text">
             <p>Learn more about our project based, affordable recruiting services</p>
             <div class="btn btn__contact">
-              <a href="#">Contact Us</a>
+              <a href="<?php echo site_url( '/contact' ); ?>">Contact Us</a>
             </div> <!-- btn btn__contact -->
           </div> <!-- contact__section--text -->
         </div> <!-- contact__section--content -->
-
       </section>
     <!-- ============================================== -->
 

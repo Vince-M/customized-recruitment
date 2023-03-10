@@ -1,5 +1,23 @@
 <?php
 
+function pageBanner() {
+  // php logic will live here
+  ?>
+
+    <section class="header__hero " role="banner" data-type="background" data-speed="2">
+      <div class="header__hero--image">
+        <img src="<?php the_field( 'hero_images' ); ?>" alt="">
+      </div>
+
+      <div class="header__hero--content">
+        <h1><?php the_title(); ?></h1>
+      </div>
+      
+    </section> <!-- hero feature-image -->
+
+  <?php
+}
+
 function customized_files() {
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Roboto:wght@400;700;900&display=swap');
   wp_enqueue_style( 'customized_main_styles', get_theme_file_uri('style.css' ));
@@ -30,12 +48,15 @@ wp_deregister_script('jquery');
 wp_register_script('jquery', '', '', '', true);
 
 
-
-
-// DEFER javascript
-function defer_parsing_of_js ( $url ) {
+function defer_parsing_of_js( $url ) {
+  if ( is_user_logged_in() ) return $url; //don't break WP Admin
   if ( FALSE === strpos( $url, '.js' ) ) return $url;
   if ( strpos( $url, 'jquery.js' ) ) return $url;
-  return "$url' defer ";
-  }
-  add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+  return str_replace( ' src', ' defer src', $url );
+}
+add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
+
+function add_comment_to_body_open() {
+printf( "<!-- THIS SHOULD RENDER AFTER THE BODY TAG OPENS --" );
+}
+add_action( 'wp_body_open', 'add_comment_to_body_open' );
