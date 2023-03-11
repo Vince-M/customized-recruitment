@@ -21,13 +21,13 @@
       <section class="full__width full__width--about">
         <div class="container frontpg__about">
           <div class="frontpg__about--img">
-            <img src="img/frontpg-about_600x326-min.jpg" alt="about Customized Recruitment" width="600">
+            <img src="<?php the_field( 'about_customized_recruitment' ); ?>" alt="about Customized Recruitment" width="600">
           </div>
           <div class="frontpg__about--text">
             <h2>About Customized Recruitment</h2>
-            <p>A vision for a different recruiter–client relationship to drive value and expedite results.</p>
+            <p><?php the_field( 'about_customized_recruitment_text' ); ?></p>
             <div class="btn btn__about">
-              <a href="about.html">Learn More</a>
+              <a href="<?php echo site_url( 'about' ); ?>">Learn More</a>
             </div> <!-- btn btn__contact -->
           </div>
         </div>
@@ -39,11 +39,11 @@
       <section class="full__width full__width--recruiting">
         <div class="container frontpg__recruiting">
           <div class="frontpg__recruiting--img">
-            <img src="img/frontpg_recruiting_670x550.jpg" alt="Recruiting Services" width="670">
+            <img src="<?php the_field( 'recruiting_services_image' ); ?>" alt="Recruiting Services" width="670">
           </div>
           <div class="frontpg__recruiting--text">
             <h2>Recruiting Services</h2>
-            <p>Dedicated recruiting support without the added headcount.</p>
+            <p><?php the_field( 'about_recruiting_services_text' ); ?></p>
             <div class="btn btn__recruiting">
               <a href="recruiting.html">Learn More</a>
             </div>

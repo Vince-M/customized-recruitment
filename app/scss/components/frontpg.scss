@@ -108,6 +108,7 @@
       h2 {
         font-size: rem(36);
         margin-bottom: rem(8);
+        color: var(--white);
 
         @include breakpoint-down(medium) {
           font-size: rem(26);

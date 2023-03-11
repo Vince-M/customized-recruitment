@@ -6,9 +6,10 @@ const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');
 const mobileMenu = document.querySelector('.mobileMenu');
 const nav__list = document.querySelector('.nav__list');
+const mobile__fade = document.querySelector('.mobile__fade');
 // const nav__item = document.querySelector('.nav__item');
 
-const faders = document.querySelectorAll('.fadeIn');
+// const faders = document.querySelectorAll('.fadeIn');
 
 btnHamburger.addEventListener('click', function() {
   console.log('click hamburger');
@@ -21,7 +22,7 @@ btnHamburger.addEventListener('click', function() {
     nav__list.classList.remove('fade-in');
     mobileMenu.classList.remove('nav-open');
     mobileMenu.classList.add('hide-for-mobile');
-    // nav__item.classList.remove('nav__item--open');
+    nav__list.classList.remove('nav__item--open');
   } else { // Open hamburger Menu
     console.log('else menu');
 
@@ -32,30 +33,30 @@ btnHamburger.addEventListener('click', function() {
     nav__list.classList.add('fade-in');
     mobileMenu.classList.add('nav-open');
     mobileMenu.classList.remove('hide-for-mobile');
-    // nav__item.classList.add('nav__item--open');
+    nav__list.classList.add('nav__item--open');
   }
 });
 
-const appearOptions = {
-  threshold: 1,
-  rootMargin: "0px 0px -100px 0px"
-};
+// const appearOptions = {
+//   threshold: 1,
+//   rootMargin: "0px 0px -100px 0px"
+// };
 
-const appearOnScroll = new IntersectionObserver(function(
-  entries,
-  appearOnScoll
-) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add('appear');
-      appearOnScroll.unobserve(entry.target);
-    }
-  })
-},
-appearOptions);
+// const appearOnScroll = new IntersectionObserver(function(
+//   entries,
+//   appearOnScoll
+// ) {
+//   entries.forEach(entry => {
+//     if (!entry.isIntersecting) {
+//       return;
+//     } else {
+//       entry.target.classList.add('appear');
+//       appearOnScroll.unobserve(entry.target);
+//     }
+//   })
+// },
+// appearOptions);
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-})
+// faders.forEach(fader => {
+//   appearOnScroll.observe(fader);
+// })
