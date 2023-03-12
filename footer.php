@@ -32,7 +32,7 @@
     <footer class="footer">
       <div class="container footer__wrapper">
         <div class="footer__identity">
-          <a href="index.html"><img src="img/Customized_Recruitment_logo.svg" height="50" alt="Customized Recruitment logo"></a>
+          <a href="index.html"><img src="<?php echo get_theme_file_uri() ?>/img/Customized_Recruitment_logo.svg" height="50" alt="Customized Recruitment logo"></a>
         </div>
         <div class="footer__menu">
           <!-- <ul class="footer__nav">
@@ -59,11 +59,11 @@
           ?>
         </div> <!-- footer__menu -->
         <div class="footer__info">
-          <p class="footer__info--privacy"><a href="#">Privacy Policy</a></p>
+          <p class="footer__info--privacy"><a href="<?php echo site_url( '/privacy-policy' ); ?>">Privacy Policy</a></p>
           <div class="footer__info--social">
-            <a href="#"><img src="img/LI-In-Bug_45x38.png" alt="linkedin logo" width="45px" height="38px" class="footer__info--linkedin"></a>
+            <a href="#"><img src="<?php echo get_theme_file_uri() ?>/img/LI-In-Bug_45x38.png" alt="linkedin logo" width="45px" height="38px" class="footer__info--linkedin"></a>
           </div> <!-- footer__info--social -->
-          <p class="footer__info--copyright">&copy; 2023 Customized Recruitment</p>
+          <p class="footer__info--copyright">&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
         </div> <!-- footer__info -->
       </div> <!-- container footer__wrapper -->
     </footer> <!-- footer -->
