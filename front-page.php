@@ -21,7 +21,12 @@
       <section class="full__width full__width--about">
         <div class="container frontpg__about">
           <div class="frontpg__about--img">
-            <img src="<?php the_field( 'about_customized_recruitment' ); ?>" alt="about Customized Recruitment" width="600">
+              <?php 
+                $image = get_field('about_customized_recruitment');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; 
+              ?>
           </div>
           <div class="frontpg__about--text">
             <h2>About Customized Recruitment</h2>
@@ -39,7 +44,12 @@
       <section class="full__width full__width--recruiting">
         <div class="container frontpg__recruiting">
           <div class="frontpg__recruiting--img">
-            <img src="<?php the_field( 'recruiting_services_image' ); ?>" alt="Recruiting Services" width="670">
+            <?php 
+              $image = get_field('recruiting_services_image');
+              if( !empty( $image ) ): ?>
+                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+              <?php endif; 
+            ?>
           </div>
           <div class="frontpg__recruiting--text">
             <h2>Recruiting Services</h2>
