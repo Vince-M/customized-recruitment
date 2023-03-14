@@ -82,32 +82,29 @@
         
 
         <div class="container frontPage__testimonials--section">
-          <div class="frontPage__testimonials--testimonial fadeIn">
-            <div class="testimonial__logo">
-              <img src="img/ha_logo_dark_400x63.png" alt="Harbour Air Seaplanes logo" width="400px">
-            </div> <!-- testimonial__logo -->
-            <div class="testimonial__excerpt">
-              <p>
-                I absolutely trust the process that Customized Recruitment uses to identify and onboard successful candidates across all areas of our business. They go above and beyond, guiding every step along the way...  
-              </p>
-              <div class="readMore">
-                <a href="testimonials-single.html">[ Read More ]</a>
-              </div>
-            </div> <!-- testimonial__excerpt -->
-          </div> <!-- frontPage__testimonials--testimonial -->
-  
-          <div class="frontPage__testimonials--testimonial fadeIn">
-            <div class="testimonial__logo">
-              <img src="img/denrayTire_210x70.jpg" alt="Denray Tire logo" width="210px">
-            </div> <!-- testimonial__logo -->
-            <div class="testimonial__excerpt">
-              <p>
-                While many candidates have the technical qualifications, Theresa ensures she is presenting candidates that not only meet the skills required for the role but are the best fit for our culture....              </p>
-              <div class="readMore">
-                <a href="testimonials-single-denray.html">[ Read More ]</a>
-              </div>
-            </div> <!-- testimonial__excerpt -->
-          </div> <!-- frontPage__testimonials--testimonial -->
+        <?php
+          $homepageTestiomonials = new WP_Query(array(
+            'posts_per_page'  =>  2,
+            'post_type'       =>  'testimonials',
+            'paged'           =>  $paged
+          ));
+
+          while($homepageTestiomonials->have_posts()) {
+            $homepageTestiomonials->the_post(); ?>
+            <div class="frontPage__testimonials--testimonial fadeIn">
+              <div class="testimonial__logo">
+                <img src="img/ha_logo_dark_400x63.png" alt="Harbour Air Seaplanes logo" width="400px">
+              </div> <!-- testimonial__logo -->
+              <div class="testimonial__excerpt">
+                <p><?php echo wp_trim_words(get_the_content(), 18); ?></p>
+                <div class="readMore">
+                  <a href="testimonials-single.html">[ Read More ]</a>
+                </div>
+              </div> <!-- testimonial__excerpt -->
+            </div> <!-- frontPage__testimonials--testimonial -->
+          <?php }
+        ?>
+
         </div> <!-- container frontPage__testimonials--section -->
        
         <div class="container testimonials__all">

@@ -26,54 +26,54 @@
 }
 
 // Header overlay animation
-@keyframes fade-in {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
+// @keyframes fade-in {
+//   from {
+//     visibility: hidden;
+//     opacity: 0;
+//   }
 
-  1% {
-    visibility: visible;
-    opacity: 0;
-  }
+//   1% {
+//     visibility: visible;
+//     opacity: 0;
+//   }
 
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
-}
+//   to {
+//     visibility: visible;
+//     opacity: 1;
+//   }
+// }
 
-.fade-in {
-  animation: fade-in 300ms ease-in-out forwards;
-}
+// .fade-in {
+//   animation: fade-in 300ms ease-in-out forwards;
+// }
 
-@keyframes fade-out {
-  from {
-    visibility: visible;
-    opacity: 1;
-  }
+// @keyframes fade-out {
+//   from {
+//     visibility: visible;
+//     opacity: 1;
+//   }
 
-  99% {
-    visibility: visible;
-    opacity: 0;
-  }
+//   99% {
+//     visibility: visible;
+//     opacity: 0;
+//   }
 
-  to {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
+//   to {
+//     visibility: hidden;
+//     opacity: 0;
+//   }
+// }
 
-.fade-out {
-  animation: fade-out 300ms ease-in-out forwards;
-  display: none;
-}
+// .fade-out {
+//   animation: fade-out 300ms ease-in-out forwards;
+//   display: none;
+// }
 
-.fadeIn {
-  opacity: 0;
-  transition: opacity 350ms ease-in-out;
-}
+// .fadeIn {
+//   opacity: 0;
+//   transition: opacity 350ms ease-in-out;
+// }
 
-.fadeIn.appear {
-  opacity: 1;
-}
+// .fadeIn.appear {
+//   opacity: 1;
+// }

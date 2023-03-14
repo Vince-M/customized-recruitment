@@ -50,6 +50,7 @@ add_action( 'init', 'recruitment_theme_menus');
 // wp_register_script('jquery', '', '', '', true);
 
 
+
 function defer_parsing_of_js( $url ) {
   if ( is_user_logged_in() ) return $url; //don't break WP Admin
   if ( FALSE === strpos( $url, '.js' ) ) return $url;
