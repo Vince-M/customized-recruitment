@@ -81,45 +81,55 @@
     =================================================== -->
       <section class="frontPage__testimonials">
         
-          <div class="frontpg__testimonials frontPage__wrapper">
-            <div class="frontPage__wrapper--image">
-            </div> <!-- frontPage__wrapper--image -->
+        <div class="frontpg__testimonials frontPage__wrapper">
+          <div class="frontPage__wrapper--image">
+            <?php 
+              $image = get_field('client_testimonials_image');
+              if( !empty( $image ) ): ?>
+                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+              <?php endif; 
+            ?>
+          </div> <!-- frontPage__wrapper--image -->
 
-            <div class="frontPage__wrapper--text">
-              <h3>Client & Candidate Testimonials...</h3>
-            </div> <!-- frontPage__wrapper--text -->
-          </div> <!-- container frontpg__testimonials -->
+          <div class="frontPage__wrapper--text">
+            <h3>Client & Candidate Testimonials...</h3>
+          </div> <!-- frontPage__wrapper--text -->
+        </div> <!-- container frontpg__testimonials -->
         
-
         <div class="container frontPage__testimonials--section">
-        <?php
-          $homepageTestiomonials = new WP_Query(array(
-            'posts_per_page'  =>  2,
-            'post_type'       =>  'testimonials',
-            'paged'           =>  $paged
-          ));
+          <?php
+            $homepageTestiomonials = new WP_Query(array(
+              'posts_per_page'  =>  2,
+              'post_type'       =>  'testimonials',
+              'paged'           =>  $paged
+            ));
 
-          while($homepageTestiomonials->have_posts()) {
-            $homepageTestiomonials->the_post(); ?>
-            <div class="frontPage__testimonials--testimonial fadeIn">
-              <div class="testimonial__logo">
-                <img src="img/ha_logo_dark_400x63.png" alt="Harbour Air Seaplanes logo" width="400px">
-              </div> <!-- testimonial__logo -->
-              <div class="testimonial__excerpt">
-                <p><?php echo wp_trim_words(get_the_content(), 18); ?></p>
-                <div class="readMore">
-                  <a href="testimonials-single.html">[ Read More ]</a>
-                </div>
-              </div> <!-- testimonial__excerpt -->
-            </div> <!-- frontPage__testimonials--testimonial -->
-          <?php }
-        ?>
-
+            while($homepageTestiomonials->have_posts()) {
+              $homepageTestiomonials->the_post(); ?>
+              <div class="frontPage__testimonials--testimonial fadeIn">
+                <div class="testimonial__logo">
+                  <?php 
+                    $image = get_field('testimonials_logo');
+                    if( !empty( $image ) ): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <?php endif; 
+                  ?>
+                </div> <!-- testimonial__logo -->
+                <div class="testimonial__excerpt">
+                  <p><?php echo wp_trim_words(get_the_content(), 18); ?></p>
+                  <div class="readMore">
+                    <a href="<?php the_permalink(); ?>">[ Read More ]</a>
+                  </div>
+                </div> <!-- testimonial__excerpt -->
+              </div> <!-- frontPage__testimonials--testimonial -->
+            <?php }
+          ?>
         </div> <!-- container frontPage__testimonials--section -->
        
         <div class="container testimonials__all">
           <p><a href="testimonials.html">All Testimonials &raquo;</a></p>
         </div> <!-- container testimonials__all -->
+        
       </section> <!-- frontPage__testimonials -->
     <!-- ============================================== -->
 
