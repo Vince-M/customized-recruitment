@@ -7,7 +7,7 @@
       <div class="frontPage__hero--headline">
         <h1 class="hero__header--fullPage">Recruiting top talent is an art, a science, and a professional calling.</h1>
         <h2 class="hero__header--fullPage">Attracting the right candidates for a position is the first step in making a successful hire.</h2>
-        <h2 class="hero__header--fullPage">Expertly managing the talent acquisition process, reducing time from attracting and hiring.</h2>
+        <h2 class="hero__header--fullPage">Efficient and affordable talent acquisition, reducing time and effort for you to hire the best candidate.</h2>
         <div class="btn btn__hero btn__contact">
           <a href="#">Contact Us</a>
         </div> <!-- btn btn__contact -->

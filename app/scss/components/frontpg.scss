@@ -14,10 +14,10 @@
     }
 
     &--connect {
-      // background-image: url('./img/lets_connect_bkgd_1920x400.jpg');
-      // background-repeat: no-repeat;
-      // background-position: center center;
-      // width: cover;
+      background-image: url('./img/lets_connect_bkgd_1920x400.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: cover;
       height: rem(300);
       overflow: hidden;
       display: flex;
@@ -328,7 +328,7 @@
     position: relative;
 
     &--image {
-      // background-image: url('../img/index_testimonials_1920x350.jpg');
+      background-image: url('./img/index_testimonials_1920x350.jpg');
       background-repeat: no-repeat;
       background-position: top;
       width: 100%;
