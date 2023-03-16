@@ -75,8 +75,9 @@
         <div class="container page__connect">
           <h2>Let's Connect</h2>
           <div class="page__connect--input">
-            <input type="text" class="index__input" id="Name" name="Name" placeholder="Full Name" size="40">
-            <input type="email" class="index__input" id="Email" name="Email" placeholder="Email" size="40">
+            <?php echo do_shortcode( '[wpforms id="238"]' ); ?>
+            <!-- <input type="text" class="index__input" id="Name" name="Name" placeholder="Full Name" size="40">
+            <input type="email" class="index__input" id="Email" name="Email" placeholder="Email" size="40"> -->
           </div> <!-- page__connect--input -->
         </div> <!-- container page__connect -->
       </section> <!-- full__width full__width--connect -->
@@ -108,6 +109,8 @@
             $homepageTestiomonials = new WP_Query(array(
               'posts_per_page'  =>  2,
               'post_type'       =>  'testimonials',
+              'orderby'         =>  'meta_value_num',
+              'order'           =>  'ASC',
               'paged'           =>  $paged
             ));
 
