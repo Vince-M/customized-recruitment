@@ -1,7 +1,6 @@
 <?php
 
 function pageBanner() {
-  // php logic will live here
   ?>
 
     <section class="header__hero " role="banner" data-type="background" data-speed="2">
@@ -22,7 +21,7 @@ function customized_files() {
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Roboto:wght@400;700;900&display=swap');
   wp_enqueue_style( 'customized_main_styles', get_theme_file_uri('style.css' ));
   wp_enqueue_style( 'customized_styles', get_theme_file_uri('main.css' ));
-  wp_enqueue_script( 'main_customized_js', get_stylesheet_directory_uri() . '/dist/script.js', NULL, '1.0', false );
+  wp_enqueue_script( 'main_customized_js', get_stylesheet_directory_uri() . '/dist/script.js', NULL, '1.0', true );
 }
 
 add_action('wp_enqueue_scripts', 'customized_files');

@@ -66,6 +66,12 @@
     <!-- LET'S CONNECT
     =================================================== -->
       <section class="full__width full__width--connect">
+      <?php 
+              $image = get_field('connect_image');
+              if( !empty( $image ) ): ?>
+                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+              <?php endif; 
+            ?>
         <div class="container page__connect">
           <h2>Let's Connect</h2>
           <div class="page__connect--input">
@@ -97,6 +103,7 @@
         </div> <!-- container frontpg__testimonials -->
         
         <div class="container frontPage__testimonials--section">
+
           <?php
             $homepageTestiomonials = new WP_Query(array(
               'posts_per_page'  =>  2,
@@ -124,6 +131,7 @@
               </div> <!-- frontPage__testimonials--testimonial -->
             <?php }
           ?>
+
         </div> <!-- container frontPage__testimonials--section -->
        
         <div class="container testimonials__all">

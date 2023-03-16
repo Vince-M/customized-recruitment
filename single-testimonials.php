@@ -2,12 +2,16 @@
 
     <!-- HERO
     =================================================== -->
-      <?php
-        while(have_posts()) {
-          the_post();
-          pageBanner();
-        }
-      ?>
+    <section class="header__hero " role="banner" data-type="background" data-speed="2">
+      <div class="header__hero--image">
+        <img src="<?php the_field( 'hero_images' ); ?>" alt="">
+      </div>
+
+      <div class="header__hero--content">
+        <h1>Client & Candidate Testimonials...</h1>
+      </div>
+      
+    </section> <!-- hero feature-image -->
     <!-- ============================================== -->
 
     <!-- CLIENT TESTIMONIALS
@@ -33,7 +37,7 @@
           </div>
 
           <div class="btn btn__testimonial">
-            <a href="testimonials.html">Back to Testimonials</a>
+            <a href="<?php echo esc_url( '/testimonials' ) ?>">Back to Testimonials</a>
           </div> <!-- btn btn__contact -->
 
        </div> <!-- container testimonial__blog -->
