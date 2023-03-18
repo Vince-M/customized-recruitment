@@ -1,3 +1,8 @@
+<?php
+/*
+  Template Name: Testimonials Page Template
+  */
+?>
 
 <?php get_header(); ?>
 
@@ -15,18 +20,17 @@
     </section> <!-- hero feature-image -->
     <!-- ============================================== -->
 
-
-
     <!-- TESTIMONIAL INTRO SECTION
     =================================================== -->
     <section class="container-blogText testimonial__intro--bold">
-  
-
-    <?php the_content(); ?>
-
+ 
+      <?php the_content(); ?>
 
     </section>
     <!-- ============================================== -->
+
+    <!-- CONTENT
+    =================================================== -->
     <section class="full__width">
       <div class="container testimonials__section--column">
    
@@ -34,6 +38,7 @@
           $homepageTestiomonials = new WP_Query(array(
             'posts_per_page'  =>  -1,
             'post_type'       =>  'testimonials',
+            'orderby'         =>  'meta_value_num',
             'order'           =>  'ASC',
             'paged'           =>  $paged
           ));

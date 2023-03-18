@@ -9,7 +9,7 @@
       </div>
 
       <div class="header__hero--content">
-        <h1><?php the_title(); ?></h1>
+        <h1>Client & Candidate Testimonials</h1>
       </div>
       
     </section> <!-- hero feature-image -->
@@ -21,12 +21,13 @@
     =================================================== -->
     <section class="container-blogText testimonial__intro--bold">
   
-
-    <?php the_content(); ?>
-
+      <p>Integrity is the single most important core value for Customized Recruitment, and it shows in the endorsements received from both Clients and Candidates. With a commitment to building strong and sustainable relationships Theresa and her team endeavour to understand the business needs behind a position, and the ideal candidate profile that will be engaged and successful in the role. Learn more about the experiences of both client and candidates through the testimonials below.</p>
 
     </section>
     <!-- ============================================== -->
+
+    <!-- CONTENT
+    =================================================== -->
     <section class="full__width">
       <div class="container testimonials__section--column">
    
@@ -63,6 +64,7 @@
 
       </div> <!-- container frontpg__testimonials--testimonial -->
     </section> <!-- full__width frontpg__testimonials--section -->
+     <!-- ============================================== -->
 
 
 <?php get_footer(); ?>
