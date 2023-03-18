@@ -1,1 +1,38 @@
 @use '../util' as *;
+
+.contact {
+
+  &__list {
+    margin-left: rem(40);
+
+    @include breakpoint-down(medium) {
+      margin-left: 0;
+    }
+
+    ul {
+      list-style: disc;
+      line-height: 1.5;
+      margin-bottom: rem(40);
+    }
+
+    ul li {
+      margin-bottom: rem(15);
+      padding-left: rem(10);
+    }
+
+    &--strong {
+      font-weight: 700;
+      color: var(--darkGrey);
+    }
+  }
+}
+
+h2.contact-title {
+  color: var(--darkGrey);
+  font-size: rem(40);
+  margin-bottom: rem(8);
+}
+
+div.wpforms-container-full {
+  margin: 0 auto;
+}
