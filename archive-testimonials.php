@@ -52,8 +52,8 @@
                   ?>
                 </div> <!-- testimonial__logo -->
                 <div class="testimonial__excerpt">
-                  <p><?php if (has_excerpt()) {
-                  echo geet_the_excerpt();
+                <p><?php if (has_excerpt()) {
+                  echo get_the_excerpt();
                 } else {
                   echo wp_trim_words(get_the_content(), 25);
                 } ?></p>
