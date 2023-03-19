@@ -14,7 +14,7 @@
       </div>
 
       <div class="header__hero--content">
-        <h1><?php the_title(); ?></h1>
+        <h1>Client & Candidate Testimonials</h1>
       </div>
       
     </section> <!-- hero feature-image -->
@@ -48,15 +48,19 @@
             <div class="container testimonials__section--single fadeIn">
               <div class="testimonial">
                 <div class="testimonial__logo">
-                  <?php 
+                <a href="<?php the_permalink(); ?>"><?php 
                     $image = get_field('testimonials_logo');
                     if( !empty( $image ) ): ?>
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                     <?php endif; 
-                  ?>
+                  ?></a>
                 </div> <!-- testimonial__logo -->
                 <div class="testimonial__excerpt">
-                  <p><?php echo wp_trim_words(get_the_content(), 18); ?></p>
+                  <p><?php if (has_excerpt()) {
+                  echo get_the_excerpt();
+                } else {
+                  echo wp_trim_words(get_the_content(), 25);
+                } ?></p>
                   <div class="readMore">
                     <a href="<?php the_permalink(); ?>">[ Read More ]</a>
                   </div>
