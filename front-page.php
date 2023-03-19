@@ -9,7 +9,7 @@
         <h2 class="hero__header--fullPage">Attracting the right candidates for a position is the first step in making a successful hire.</h2>
         <h2 class="hero__header--fullPage">Efficient and affordable talent acquisition, reducing time and effort for you to hire the best candidate.</h2>
         <div class="btn btn__hero btn__contact">
-          <a href="#">Contact Us</a>
+          <a href="<?php echo site_url( 'contact' ); ?>">Contact Us</a>
         </div> <!-- btn btn__contact -->
       </div> <!-- hero__headline -->
 
