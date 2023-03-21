@@ -25,6 +25,10 @@
       align-items: center;
       margin-bottom: rem(100);
 
+      @include breakpoint-down(small) {
+        background-image: none;
+      }
+
       img {
         width: 100%;
       }
@@ -269,13 +273,18 @@
 
   &__connect {
     background-color: var(--corpRed80);
-    height: rem(200);
+    // height: rem(200);
     border: rem(10) solid var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: absolute;
+    padding: rem(20) 0;
+
+    @include breakpoint-down(small) {
+      border: none;
+    }
 
     h2 {
       font-size: rem(36);

@@ -38,7 +38,6 @@
           $homepageTestiomonials = new WP_Query(array(
             'posts_per_page'  =>  -1,
             'post_type'       =>  'testimonials',
-            'orderby'         =>  'meta_value_num',
             'order'           =>  'ASC',
             'paged'           =>  $paged
           ));
@@ -67,10 +66,13 @@
                 </div> <!-- testimonial__excerpt -->
               </div> <!-- testimonial -->
             </div> <!-- frontPage__testimonials--testimonial -->
+            
           <?php }
         ?>
 
       </div> <!-- container frontpg__testimonials--testimonial -->
+
+
     </section> <!-- full__width frontpg__testimonials--section -->
 
 

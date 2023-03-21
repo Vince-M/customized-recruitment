@@ -5,9 +5,12 @@
     <section class="hero feature-image frontPage__hero" role="banner" data-type="background" data-speed="2">
 
       <div class="frontPage__hero--headline">
-        <h1 class="hero__header--fullPage">Recruiting top talent is an art, a science, and a professional calling.</h1>
-        <h2 class="hero__header--fullPage">Attracting the right candidates for a position is the first step in making a successful hire.</h2>
-        <h2 class="hero__header--fullPage">Efficient and affordable talent acquisition, reducing time and effort for you to hire the best candidate.</h2>
+        
+        <h1 class="hero__header--fullPage"><?php the_field('hero_title') ?></h1>
+        <!-- <h2 class="hero__header--fullPage">Attracting the right candidates for a position is the first step in making a successful hire.</h2>
+        <h2 class="hero__header--fullPage">Efficient and affordable talent acquisition, reducing time and effort for you to hire the best candidate.</h2> -->
+        <h2 class="hero__header--fullPage"><?php the_field('hero_subtitle_one') ?></h2>
+        <h2 class="hero__header--fullPage"><?php the_field('hero_subtitle_two') ?></h2>
         <div class="btn btn__hero btn__contact">
           <a href="<?php echo site_url( 'contact' ); ?>">Contact Us</a>
         </div> <!-- btn btn__contact -->

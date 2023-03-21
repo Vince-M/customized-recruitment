@@ -16,14 +16,6 @@
           <a href="index.html"><img src="<?php echo get_theme_file_uri() ?>/img/Customized_Recruitment_logo.svg" height="50" alt="Customized Recruitment logo"></a>
         </div>
         <div class="footer__menu">
-          <!-- <ul class="footer__nav">
-            <li class="footer__nav--item"><a href="index.html">Home</a></li>
-            <li class="footer__nav--item"><a href="#">Recruiting Services</a></li>
-            <li class="footer__nav--item"><a href="#">Testimonials</a></li>
-            <li class="footer__nav--item"><a href="about.html">About</a></li>
-            <li class="footer__nav--item"><a href="#">Contact</a></li>
-          </ul> footer__nav -->
-
           <?php
             wp_nav_menu( array(
               'theme_location'        =>  'footer-menu',
@@ -42,7 +34,7 @@
         <div class="footer__info">
           <p class="footer__info--privacy"><a href="<?php echo site_url( '/privacy-policy' ); ?>">Privacy Policy</a></p>
           <div class="footer__info--social">
-            <a href="#"><img src="<?php echo get_theme_file_uri() ?>/img/LI-In-Bug_45x38.png" alt="linkedin logo" width="45px" height="38px" class="footer__info--linkedin"></a>
+          <a href="https://www.linkedin.com/in/theresa-bolton/" target="_blank"><img src="<?php echo get_theme_file_uri() ?>/img/LI-In-Bug_45x38.png" alt="linkedin logo" width="45px" height="38px" class="footer__info--linkedin"></a>
           </div> <!-- footer__info--social -->
           <p class="footer__info--copyright">&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
         </div> <!-- footer__info -->
